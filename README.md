@@ -12,3 +12,6 @@ Once you did that, you can run `./main Monkey.txt` to view the Monkey in wirefra
 
 ### Here's a screenshot of Monkey
 ![img file](https://github.com/threadException/renderer/blob/main/screenshot.png)
+
+### Credits
+https://github.com/ssloy/tinyrenderer
