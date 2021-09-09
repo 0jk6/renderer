@@ -1,0 +1,1 @@
+g++ -c ./*.cpp -g -Wall && g++ *.o -o ./main -L C:/MinGW/lib -lmingw32 -lSDL2main -lSDL2
