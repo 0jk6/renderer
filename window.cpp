@@ -49,6 +49,10 @@ void Window::line(int x0, int y0, int x1, int y1, Color color)
 {
 	SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
 
+	//if you are lazy, use the following in built sdl function to draw a line
+	//SDL_RenderDrawLine(renderer, x0, y0, x1, y1);
+	
+	//this block of code will draw lines using bresenham's line drawing algorithm
 	bool steep = false; 
     if (std::abs(x0-x1)<std::abs(y0-y1)) { 
         std::swap(x0, y0); 
@@ -75,7 +79,7 @@ void Window::line(int x0, int y0, int x1, int y1, Color color)
             y += (y1>y0?1:-1); 
             error2 -= dx*2; 
         } 
-    } 
+    }
 }
 
 void Window::drawLine(Point p1, Point p2, Color color){

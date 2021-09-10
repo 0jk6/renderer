@@ -39,6 +39,9 @@ int main(int argc, char *argv[]){
 		sdl_window.renderClear();
 
 		//processing things
+
+		//draw the model's triangles on the screen
+		//if you can't see something, make sure that you scale it from Model class constructor
 		for(auto tri: model.triangles){
 
 			Triangle t = {
