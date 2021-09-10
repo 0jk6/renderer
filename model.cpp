@@ -25,6 +25,12 @@ Model::Model(const char *filename){
 			file >> vertex.x;
 			file >> vertex.y;
 			file >> vertex.z;
+
+			//vertex indices start from 1
+			vertex.x -= 1;
+			vertex.y -= 1;
+			vertex.z -= 1;
+			
 			faces.push_back(vertex);
 		}
 	}
