@@ -23,13 +23,17 @@ try:
 				f.write(line + "\n")
 
 		for line in faces:
-			face = line.split(" ")
-			
-			s = "f " + face[0].split("/")[0] + " " + face[1].split("/")[0] + " " + face[2].split("/")[0] + "\n";
+			try:
+				face = line.split(" ")
+				
+				s = "f " + face[0].split("/")[0] + " " + face[1].split("/")[0] + " " + face[2].split("/")[0] + "\n";
 
-			print(s)
-			f.write(s)
+				print(s)
+				f.write(s)
+			except:
+				pass
 
 		f.close()
+
 except:
-	print(f"Usage: python parser.py <OBJ file> <new OBJ filename>")
+	print("Usage: python parser.py <OBJ file> <new OBJ file>")

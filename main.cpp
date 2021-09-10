@@ -23,7 +23,8 @@ int main(int argc, char *argv[]){
 	bool quit = false;
 	SDL_Event event;
 
-	Model model(argv[1]);
+	//specify filename and scale
+	Model model(argv[1], 1);
 	model.mesh();
 
 	//main loop

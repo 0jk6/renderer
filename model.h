@@ -15,7 +15,7 @@ public:
 	vector<Vector3> vertices;
 	vector<Vector3> faces;
 	
-	Model(const char *filename);
+	Model(const char *filename, float scaleAmount);
 	void mesh();
 };
 

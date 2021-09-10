@@ -3,7 +3,7 @@
 #include "vector3.h"
 
 
-Model::Model(const char *filename){
+Model::Model(const char *filename, float scaleAmount){
 	fstream file;
 
 	file.open(filename);
@@ -18,6 +18,9 @@ Model::Model(const char *filename){
 			file >> vertex.x;
 			file >> vertex.y;
 			file >> vertex.z;
+
+			vertex.scale(scaleAmount);
+
 			vertices.push_back(vertex);
 			center.add(vertex);
 		}
