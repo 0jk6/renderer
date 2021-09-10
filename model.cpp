@@ -29,10 +29,8 @@ Model::Model(const char *filename, float scaleAmount){
 			file >> vertex.y;
 			file >> vertex.z;
 
-			//vertex indices start from 1
-			vertex.x -= 1;
-			vertex.y -= 1;
-			vertex.z -= 1;
+			//vertex indices start from 1, so we need to decrement the index by 1
+			vertex.add(-1);
 			
 			faces.push_back(vertex);
 		}
