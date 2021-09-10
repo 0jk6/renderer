@@ -9,6 +9,12 @@ On Window, you can move the `SDL2` files into `C:/MinGW/lib` and run the `build.
 
 Once you did that, you can run `./main Monkey.txt` to view the Monkey in wireframe view.
 
+### Loading an OBJ file
+Before loading an obj file you need to run the following command to extract face vertices
+
+`python parser.py <OBJ file> <new OBJ filename>`
+
+Once you do this, run the `main` file as `./main <new OBJ filename>`
 
 ### Here's a screenshot of Monkey
 ![img file](https://github.com/threadException/renderer/blob/main/screenshot.png)
